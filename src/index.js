@@ -42,7 +42,7 @@ const Otp = () => {
 
     return (
         <View style={styles.container}>
-            <FirebaseRecaptchaVerifierModal ref={recaptchaVerifier} firebaseConfig={firebaseConfig}/>
+            <FirebaseRecaptchaVerifierModal ref={recaptchaVerifier} firebaseConfig={firebaseConfig} attemptInvisibleVerification={true}/>
             <Text style={styles.otpText}>Login using OTP</Text>
             <TextInput placeholder='Phone Number' onChangeText={setPhoneNumber} keyboardType='phone-pad' autoCompleteType='tel' style='styles.textInput'></TextInput>
             <TouchableOpacity style={styles.sendVerification} onPress={sendVerification}>
